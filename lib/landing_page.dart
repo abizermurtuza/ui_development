@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_development/app_constants.dart';
 import 'package:ui_development/login_page.dart';
+import 'package:ui_development/register_page.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
@@ -66,28 +67,38 @@ class LandingPage extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
-                    // border: Border.all(
-                    //   width: 1,
-                    //   color: Colors.white,
-                    // )
+                    border: Border.all(
+                      width: 1,
+                      color: Colors.white,
+                    ),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Expanded(
-                          child: _buildButton(
-                              title: AppConstants.registerText,
-                              color: Colors.white)),
+                        child: _buildButton(
+                          title: AppConstants.registerText,
+                          color: Colors.white,
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const RegisterPage(),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
                       const SizedBox(width: 10),
                       Expanded(
                         child: _buildButton(
-                            title: AppConstants.signInText,
-                            color: Colors.white,
-                            onTap: () {
-                              Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => const LoginPage()));
-                            }),
+                          title: AppConstants.signInText,
+                          color: Colors.white,
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => const LoginPage()));
+                          },
+                        ),
                       ),
                     ],
                   ),
