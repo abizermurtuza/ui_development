@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_development/app_constants.dart';
-import 'package:ui_development/landing_page.dart';
+import 'package:ui_development/dashboard.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -90,7 +90,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => const LandingPage(),
+                          builder: (context) => Dashboard(),
                         ),
                       );
                     },

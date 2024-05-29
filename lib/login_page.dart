@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ui_development/app_constants.dart';
-import 'package:ui_development/landing_page.dart';
+import 'package:ui_development/dashboard.dart';
 import 'package:ui_development/register_page.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key});
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -76,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => const LandingPage(),
+                            builder: (context) => Dashboard(),
                           ),
                         );
                       },
