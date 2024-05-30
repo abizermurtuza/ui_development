@@ -131,7 +131,7 @@ class Dashboard extends StatelessWidget {
                         onTap: () {},
                         child: Container(
                           margin: const EdgeInsets.symmetric(
-                              vertical: 8, horizontal: 20),
+                              vertical: 2, horizontal: 10),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.white,
@@ -148,7 +148,8 @@ class Dashboard extends StatelessWidget {
                             children: [
                               Image.asset(
                                 imgSrc[index],
-                                width: 100,
+                                width: 75,
+                                height: 75,
                               ),
                               Text(
                                 titles[index],
