@@ -200,7 +200,6 @@ class _LoginPageState extends State<LoginPage> {
   _customTextField(
       {required String? hint,
       bool isPassword = false,
-      TextEditingController? controller,
       Function(bool)? onPasswordVisibilityChanged}) {
     return TextFormField(
       obscureText: isPassword && !_isPasswordVisible,
